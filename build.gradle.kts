@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.mohitkansal"         // Maven groupId
-version = "1.0.0"             // Maven version
+version = "1.0.1"             // Maven version
 
 gradlePlugin {
     plugins {
