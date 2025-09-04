@@ -7,7 +7,7 @@ import org.gradle.api.provider.Provider
 open class GradleVersionExtension(
     project: Project
 ) {
-    /*val code: Provider<Int> = project.providers.provider {
+    val code: Provider<Int> = project.providers.provider {
         runGit("rev-list --count HEAD").toIntOrNull() ?: 1
     }
 
@@ -20,10 +20,7 @@ open class GradleVersionExtension(
         } else {
             "0.1.0-SNAPSHOT"
         }
-    }*/
-
-    val code: Int = 100
-    val name: String = "1.0.0-SNAPSHOT"
+    }
 
     private fun runGit(command: String, ignoreError: Boolean = false): String {
         return try {
@@ -52,7 +49,7 @@ class GradleVersionPlugin : Plugin<Project> {
         // Log lazily (when values are computed)
         project.logger.lifecycle("GradleVersion plugin registered")
         project.afterEvaluate {
-            project.logger.lifecycle("GradleVersion: code=${ext.code}, name=${ext.name}")
+            project.logger.lifecycle("GradleVersion: code=${ext.code.get()}, name=${ext.name.get()}")
         }
     }
 }

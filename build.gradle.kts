@@ -10,7 +10,7 @@ repositories {
 }
 
 group = "io.github.kansalmohit19"
-version = "1.0.1"
+version = "1.0.3"
 
 gradlePlugin {
     website.set("https://github.com/kansalmohit19/GradleVersionPlugin")
