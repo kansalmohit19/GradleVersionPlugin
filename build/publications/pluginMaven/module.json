@@ -1,9 +1,9 @@
 {
   "formatVersion": "1.1",
   "component": {
-    "group": "com.mohitkansal",
+    "group": "io.github.kansalmohit19",
     "module": "GradleVersionPlugin",
-    "version": "1.0.2",
+    "version": "1.0.1",
     "attributes": {
       "org.gradle.status": "release"
     }
@@ -27,13 +27,13 @@
       },
       "files": [
         {
-          "name": "GradleVersionPlugin-1.0.2.jar",
-          "url": "GradleVersionPlugin-1.0.2.jar",
-          "size": 6147,
-          "sha512": "100d4cd11337874027856e2f85c3f00290f179707773054c3655b962536abf95e72eb3d870fc1a117ed792d38eff598b011e5cb0dbfd4162bbae88bb0b9190ec",
-          "sha256": "8293113787c8f561609b1dcd2816a535de414c40cfc50a563566ef93a041bcf5",
-          "sha1": "ed1edb3c98541990607d82e8cd5b4aa754545d8a",
-          "md5": "df6ffb4715ee35ad5f3a2858fa00226d"
+          "name": "GradleVersionPlugin-1.0.1.jar",
+          "url": "GradleVersionPlugin-1.0.1.jar",
+          "size": 5997,
+          "sha512": "656ac118a1267f89e856a7bb95daf29ddccc05d9ba9c7d5d703b0d5084e6df156b1dc867a952c94e49d37d9ca65a7136d8db5da45c72851aa1072ff744598459",
+          "sha256": "a76c23f4d0ea9758a19a536ce29e29a04949784fd7971a8e99a4d6d27fd2f5b3",
+          "sha1": "14ff7b983919fbd22eb704285531334c7d276bcd",
+          "md5": "7eef9ffad19a8fb6ef8a565da7d2cfec"
         }
       ]
     },
@@ -50,13 +50,53 @@
       },
       "files": [
         {
-          "name": "GradleVersionPlugin-1.0.2.jar",
-          "url": "GradleVersionPlugin-1.0.2.jar",
-          "size": 6147,
-          "sha512": "100d4cd11337874027856e2f85c3f00290f179707773054c3655b962536abf95e72eb3d870fc1a117ed792d38eff598b011e5cb0dbfd4162bbae88bb0b9190ec",
-          "sha256": "8293113787c8f561609b1dcd2816a535de414c40cfc50a563566ef93a041bcf5",
-          "sha1": "ed1edb3c98541990607d82e8cd5b4aa754545d8a",
-          "md5": "df6ffb4715ee35ad5f3a2858fa00226d"
+          "name": "GradleVersionPlugin-1.0.1.jar",
+          "url": "GradleVersionPlugin-1.0.1.jar",
+          "size": 5997,
+          "sha512": "656ac118a1267f89e856a7bb95daf29ddccc05d9ba9c7d5d703b0d5084e6df156b1dc867a952c94e49d37d9ca65a7136d8db5da45c72851aa1072ff744598459",
+          "sha256": "a76c23f4d0ea9758a19a536ce29e29a04949784fd7971a8e99a4d6d27fd2f5b3",
+          "sha1": "14ff7b983919fbd22eb704285531334c7d276bcd",
+          "md5": "7eef9ffad19a8fb6ef8a565da7d2cfec"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "GradleVersionPlugin-1.0.1-javadoc.jar",
+          "url": "GradleVersionPlugin-1.0.1-javadoc.jar",
+          "size": 261,
+          "sha512": "db759a9016ed3cdfc45910f79335b33f9f85b24ae9b7af27562c66dacbab9d23c32be8729c3ff7f5cb187d7047544db7a4ab8838c53b0b6192d326e1cd02aa4d",
+          "sha256": "bf85c4d0d1700c405f3bedfbc1fb5c9a206248d67ea254f9b8faa3f9771af5fe",
+          "sha1": "7a5b9260f3d0542408aa0691b0f82a59bb0a46e6",
+          "md5": "d4f7e91e5841b79897528045b45192ec"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "GradleVersionPlugin-1.0.1-sources.jar",
+          "url": "GradleVersionPlugin-1.0.1-sources.jar",
+          "size": 1386,
+          "sha512": "d39e804f29b0fbd59791751d2104b23e826dff4fc913cc72037d91f9c7153da53af59a02c4361acff31a560b0b1bb02a23d65a7d4a532c0b5685057593753923",
+          "sha256": "cb33ad60e814813cc0aebb5de72dc7b00bab41c2a57a6fccbb1187432ce228c0",
+          "sha1": "50306bc48a1caba98508016537b56e63e41aa035",
+          "md5": "aa2b6d336e88269bc2050132f588a7f2"
         }
       ]
     }
