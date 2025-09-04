@@ -22,7 +22,7 @@ gradlePlugin {
             implementationClass = "com.mohitkansal.GradleVersionPlugin"
             displayName = "Gradle Version Plugin"
             description = "Automatically generates versionCode and versionName from Git."
-            tags.set(listOf("android", "gradle", "versioning", "git"))
+            tags.set(listOf("android", "versioning", "git"))
         }
     }
 }

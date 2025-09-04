@@ -29,11 +29,11 @@
         {
           "name": "GradleVersionPlugin-1.0.1.jar",
           "url": "GradleVersionPlugin-1.0.1.jar",
-          "size": 5997,
-          "sha512": "656ac118a1267f89e856a7bb95daf29ddccc05d9ba9c7d5d703b0d5084e6df156b1dc867a952c94e49d37d9ca65a7136d8db5da45c72851aa1072ff744598459",
-          "sha256": "a76c23f4d0ea9758a19a536ce29e29a04949784fd7971a8e99a4d6d27fd2f5b3",
-          "sha1": "14ff7b983919fbd22eb704285531334c7d276bcd",
-          "md5": "7eef9ffad19a8fb6ef8a565da7d2cfec"
+          "size": 6013,
+          "sha512": "d16a3e5e50c5dafc122c0c02bde7ddf97bd7cd7898689b56de7c1f2334ed984304763687a69d5fa58bba15d2d5aec68e8b9d138da29b8c102cd7466f3f3ff087",
+          "sha256": "2e302ef36d8207d91c27d9e3bf74a3182c4a0a2e8406e63a08739acba2ff53b2",
+          "sha1": "ec2070ecbf7d3b520c377aebe78669e3cb32ae8d",
+          "md5": "2e460d7e91c5f562d5ffcbd28d46acb4"
         }
       ]
     },
@@ -52,11 +52,11 @@
         {
           "name": "GradleVersionPlugin-1.0.1.jar",
           "url": "GradleVersionPlugin-1.0.1.jar",
-          "size": 5997,
-          "sha512": "656ac118a1267f89e856a7bb95daf29ddccc05d9ba9c7d5d703b0d5084e6df156b1dc867a952c94e49d37d9ca65a7136d8db5da45c72851aa1072ff744598459",
-          "sha256": "a76c23f4d0ea9758a19a536ce29e29a04949784fd7971a8e99a4d6d27fd2f5b3",
-          "sha1": "14ff7b983919fbd22eb704285531334c7d276bcd",
-          "md5": "7eef9ffad19a8fb6ef8a565da7d2cfec"
+          "size": 6013,
+          "sha512": "d16a3e5e50c5dafc122c0c02bde7ddf97bd7cd7898689b56de7c1f2334ed984304763687a69d5fa58bba15d2d5aec68e8b9d138da29b8c102cd7466f3f3ff087",
+          "sha256": "2e302ef36d8207d91c27d9e3bf74a3182c4a0a2e8406e63a08739acba2ff53b2",
+          "sha1": "ec2070ecbf7d3b520c377aebe78669e3cb32ae8d",
+          "md5": "2e460d7e91c5f562d5ffcbd28d46acb4"
         }
       ]
     },
