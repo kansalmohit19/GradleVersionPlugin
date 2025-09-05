@@ -1,12 +1,58 @@
-# Gradle Version Plugin Publishing
+# 📦 Gradle Version Plugin Publishing
+
+This guide explains how to publish the **Gradle Version Plugin** either to **Maven Local** (for testing) or to the **Gradle Plugin Portal** (for distribution).
+
+---
+
+## 🔑 Setup Gradle Plugin Portal Credentials
+
+You need to provide your **Gradle Plugin Portal API keys**.  
+Add the following inside your `~/.gradle/gradle.properties` file (machine-wide, not in the project repo):
+
+```properties
+gradle.publish.key=YOUR_KEY
+gradle.publish.secret=YOUR_SECRET
+```
+Replace YOUR_KEY and YOUR_SECRET with the values you can get these keys from your [Gradle Plugin Portal account](https://plugins.gradle.org/me).
 
 
-## Add
-- **gradle.publish.key=**
-- **gradle.publish.secret=**
+## ⚙️ Publishing Tasks
+**1. Publish to Maven Local (for testing)**
 
-inside ~/.gradle/gradle.properties → machine-wide properties for all Gradle builds.
+```kotlin
+./gradlew publishToMavenLocal
+```
 
-### Publishing Tasks
-- **./gradlew publishToMavenLocal** → Publish task to Maven Local
-- **./gradlew publishPlugins** →  Publishes this plugin to the Gradle Plugin portal
+This will install the plugin into your local Maven repository (usually ~/.m2/repository).
+You can then use it in a sample project with:
+
+```kotlin
+plugins {
+    id("com.mohitkansal.gradle-version") version "0.1.0"
+}
+```
+
+and add:
+
+```kotlin
+pluginManagement {
+    repositories {
+        mavenLocal()
+        gradlePluginPortal()
+    }
+}
+```
+
+**2. Publish to Gradle Plugin Portal**
+
+```kotlin   
+./gradlew publishPlugins
+```
+
+This uploads the plugin to the official Gradle Plugin Portal. Once published, others can use it with:
+
+```kotlin
+plugins {
+    id("com.mohitkansal.gradle-version") version "x.y.z"
+}
+```
