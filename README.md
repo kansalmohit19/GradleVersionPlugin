@@ -14,12 +14,16 @@ plugins {
     id("com.mohitkansal.gradle-version") version "0.1.0"
 }
 ```
-### Apply the plugin to Android projects
+### Accessing values
 ```kotlin
 android {
     defaultConfig {
-    versionCode = gradleVersion.code.get()
-    versionName = gradleVersion.name.get()
+        versionCode = gradleVersion.code.get()
+        versionName = gradleVersion.name.get()
     }
 }
+```
+### Example output
+```kotlin
+GradleVersion: code=123, name=1.2.0-SNAPSHOT
 ```

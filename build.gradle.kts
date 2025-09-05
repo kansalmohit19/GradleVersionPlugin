@@ -14,7 +14,7 @@ version = "1.0.3"
 
 gradlePlugin {
     website.set("https://github.com/kansalmohit19/GradleVersionPlugin")
-    vcsUrl.set("https://github.com/kansalmohit19/GradleVersionPlugin")
+    vcsUrl.set("https://github.com/kansalmohit19/GradleVersionPlugin.git")
 
     plugins {
         create("gradleVersionPlugin") {
