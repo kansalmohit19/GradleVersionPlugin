@@ -21,7 +21,7 @@ gradlePlugin {
             id = "io.github.kansalmohit19.gradle-version"
             implementationClass = "com.mohitkansal.GradleVersionPlugin"
             displayName = "Gradle Version Plugin"
-            description = "Automatically generates versionCode and versionName from Git."
+            description = "A Gradle plugin that automatically generates versionCode and versionName based on Git commits and tags."
             tags.set(listOf("android", "versioning", "git"))
         }
     }
