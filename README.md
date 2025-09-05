@@ -11,7 +11,7 @@ A simple Gradle plugin that generates version information from Git.
 ### Apply the plugin
 ```kotlin
 plugins {
-    id("com.mohitkansal.gradle-version") version "0.1.0"
+    id("io.github.kansalmohit19.gradle-version") version "0.1.0"
 }
 ```
 ### Accessing values
@@ -27,3 +27,10 @@ android {
 ```kotlin
 GradleVersion: code=123, name=1.2.0-SNAPSHOT
 ```
+
+### Logger Tasks
+**./gradlew printGradleVersion** → Print Gradle version name and code
+Output:
+GradleVersion: code=38, name=3.8
+
+

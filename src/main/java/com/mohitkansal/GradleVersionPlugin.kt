@@ -3,34 +3,44 @@ package com.mohitkansal
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.provider.Provider
+import org.gradle.api.provider.ProviderFactory
+import javax.inject.Inject
 
-open class GradleVersionExtension(
-    project: Project
+open class GradleVersionExtension @Inject constructor(
+    private val project: Project,
+    private val providers: ProviderFactory
 ) {
-    val code: Provider<Int> = project.providers.provider {
+    val code: Provider<Int> = providers.provider {
         runGit("rev-list --count HEAD").toIntOrNull() ?: 1
     }
 
-    val name: Provider<String> = project.providers.provider {
+    /*val name: Provider<String> = providers.provider {
         val tag = runGit("describe --tags --abbrev=0", ignoreError = true)
         val branch = runGit("rev-parse --abbrev-ref HEAD", ignoreError = true)
 
-        if (tag.isNotEmpty()) {
-            if (branch == "HEAD") tag else "$tag-SNAPSHOT"
-        } else {
-            "0.1.0-SNAPSHOT"
+        when {
+            tag.isNotEmpty() && branch != "HEAD" -> "$tag-SNAPSHOT"
+            tag.isNotEmpty() -> tag
+            else -> "0.1.0-SNAPSHOT"
         }
+    }*/
+
+    val name: Provider<String> = code.map { versionCode ->
+        versionCode.toString()
+            //.padStart(6, '0')
+            .map { it.toString() }
+            .joinToString(".")
     }
 
     private fun runGit(command: String, ignoreError: Boolean = false): String {
         return try {
             val process = ProcessBuilder("git", *command.split(" ").toTypedArray())
-                .directory(java.io.File(System.getProperty("user.dir")))
+                .directory(project.rootDir)
                 .redirectErrorStream(true)
                 .start()
-            val text = process.inputStream.bufferedReader().readText().trim()
+            val output = process.inputStream.bufferedReader().readText().trim()
             process.waitFor()
-            if (process.exitValue() != 0 && !ignoreError) "" else text
+            if (process.exitValue() != 0 && !ignoreError) "" else output
         } catch (e: Exception) {
             ""
         }
@@ -43,13 +53,20 @@ class GradleVersionPlugin : Plugin<Project> {
         val ext = project.extensions.create(
             "gradleVersion",
             GradleVersionExtension::class.java,
-            project
+            project,
+            project.providers
         )
 
-        // Log lazily (when values are computed)
-        project.logger.lifecycle("GradleVersion plugin registered")
-        project.afterEvaluate {
-            project.logger.lifecycle("GradleVersion: code=${ext.code.get()}, name=${ext.name.get()}")
+        // Log lazily using a task to avoid configuration cache problems
+        project.tasks.register("printGradleVersion") {
+            group = "versioning"
+            description = "Prints the Gradle version info from Git"
+
+            doLast {
+                val code = ext.code.get()
+                val name = ext.name.get()
+                project.logger.lifecycle("GradleVersion: code=$code, name=$name")
+            }
         }
     }
 }
