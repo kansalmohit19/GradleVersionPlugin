@@ -1,20 +1,37 @@
-# Gradle Version Plugin
+# 🚀 Gradle Version Plugin
 
-A simple Gradle plugin that generates version information from Git.
+[![Gradle](https://img.shields.io/badge/Gradle-7.0%2B-green?logo=gradle)](https://gradle.org/) 
+[![Kotlin](https://img.shields.io/badge/Kotlin-DSL-blue?logo=kotlin)](https://kotlinlang.org/) 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)  
 
-## Features
-- **versionCode** → Based on the total number of Git commits (`git rev-list --count HEAD`).
-- **versionName** → Based on the latest Git tag, with `-SNAPSHOT` appended if not on a tag.
+A lightweight Gradle plugin that automatically generates **versionCode** and **versionName** directly from your Git history.  
+Perfect for Android projects and any build setup where you want Git-driven versioning.
 
-## Usage
+---
 
-### Apply the plugin
+## ✨ Features
+
+- 🔢 **versionCode** → Derived from the total number of Git commits (`git rev-list --count HEAD`).
+- 🏷️ **versionName** → Dynamically generated (based on tags or commit count).
+- ⚡ **Zero config** → Just apply the plugin and use the values.
+- 🔒 **Safe defaults** → Falls back gracefully if Git is not available.
+
+---
+
+## 📦 Installation
+
+Add the plugin to your `plugins` block:
+
 ```kotlin
 plugins {
-    id("io.github.kansalmohit19.gradle-version") version "0.1.0"
+    id("com.mohitkansal.gradle-version") version "0.1.0"
 }
 ```
-### Accessing values
+
+## ⚙️ Usage
+
+### Android example
+
 ```kotlin
 android {
     defaultConfig {
@@ -23,14 +40,24 @@ android {
     }
 }
 ```
-### Example output
+
+### Custom task example
+
 ```kotlin
+tasks.register("printVersion") {
+    doLast {
+        println("App Version → Code=${gradleVersion.code.get()}, Name=${gradleVersion.name.get()}")
+    }
+}
+```
+
+## 📋 Example Output
+
+```kotlin
+> ./gradlew printGradleVersion
+
 GradleVersion: code=123, name=1.2.0-SNAPSHOT
 ```
 
-### Logger Tasks
-**./gradlew printGradleVersion** → Print Gradle version name and code
-Output:
-GradleVersion: code=38, name=3.8
-
-
+## ⭐ If you like this plugin, don’t forget to star the repo!
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/kansalmohit19/GradleVersionPlugin)
