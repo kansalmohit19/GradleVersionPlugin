@@ -1,10 +1,10 @@
-# 📦 Gradle Version Plugin Publishing
+# Gradle Version Plugin Publishing
 
 This guide explains how to publish the **Gradle Version Plugin** either to **Maven Local** (for testing) or to the **Gradle Plugin Portal** (for distribution).
 
 ---
 
-## 🔑 Setup Gradle Plugin Portal Credentials
+## Setup Gradle Plugin Portal Credentials
 
 You need to provide your **Gradle Plugin Portal API keys**.  
 Add the following inside your `~/.gradle/gradle.properties` file (machine-wide, not in the project repo):
@@ -16,7 +16,7 @@ gradle.publish.secret=YOUR_SECRET
 Replace YOUR_KEY and YOUR_SECRET with the values you can get these keys from your [Gradle Plugin Portal account](https://plugins.gradle.org/me).
 
 
-## ⚙️ Publishing Tasks
+## Publishing Tasks
 **1. Publish to Maven Local (for testing)**
 
 ```kotlin

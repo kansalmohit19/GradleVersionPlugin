@@ -1,6 +1,6 @@
 # Project information
-site_name: "LibraryProject"
-site_description: "Documentation for Library Project"
+site_name: "GradleVersionPlugin"
+site_description: "Documentation for Gradle Version Plugin"
 site_url: "https://kansalmohit19.github.io/GradleVersionPlugin/"
 
 # Repository info (adds edit/view on GitHub buttons)
@@ -23,13 +23,9 @@ theme:
 # Navigation
 nav:
   - Overview: index.md
-  - Sample Library:
-      - Guild: sample-library.md
-  - ViewModel:
-      - Guild: view-model.md
-      - Examples: usage/examples.md
-  - Changelog: change-log.md
-
+  - Usage: usage.md
+  - Publishing: publishing.md
+  - License: license.md
 
 # Markdown extensions
 markdown_extensions:
