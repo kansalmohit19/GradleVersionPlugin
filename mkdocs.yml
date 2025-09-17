@@ -1,0 +1,41 @@
+# Project information
+site_name: "LibraryProject"
+site_description: "Documentation for Library Project"
+site_url: "https://kansalmohit19.github.io/GradleVersionPlugin/"
+
+# Repository info (adds edit/view on GitHub buttons)
+repo_name: "kansalmohit19/GradleVersionPlugin"
+repo_url: "https://github.com/kansalmohit19/GradleVersionPlugin"
+
+# Theme settings
+theme:
+  name: "material"
+  language: 'en'
+  icon:
+    logo: material/account-tie-hat
+  palette:
+    primary: 'black'
+    accent: 'deep orange'
+  font:
+    text: 'Roboto'
+    code: 'JetBrains Mono'
+
+# Navigation
+nav:
+  - Overview: index.md
+  - Sample Library:
+      - Guild: sample-library.md
+  - ViewModel:
+      - Guild: view-model.md
+      - Examples: usage/examples.md
+  - Changelog: change-log.md
+
+
+# Markdown extensions
+markdown_extensions:
+  - admonition
+  - codehilite
+  - footnotes
+  - tables
+  - toc:
+      permalink: true
